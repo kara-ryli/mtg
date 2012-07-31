@@ -1,10 +1,55 @@
-<!DOCTYPE HTML>
-<html lang="ru-RU">
+<!DOCTYPE html>
+<html lang="en" manifest="magic.appcache">
 <head>
-	<meta charset="UTF-8">
-	<title>It works!</title>
+	<meta charset="utf-8">
+	<title>Magic</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width = device-width, initial-scale=1.0, user-scalable = no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+	<!-- Date: 2008-10-28 -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="home-screen-icon.jpg">
+	<link href="style.css" type="text/css" rel="stylesheet" media="screen">
+	<link href="big-browser.css" title="big browser" type="text/css" rel="stylesheet" media="screen and (min-width: 481px)">
 </head>
 <body>
-	<p>YAY!</p>
+	<div id="doc">
+	  <div id="bevel"></div>
+	  <img id="gradient" src="images/background-gradient.png">
+	  <div id="content">
+	    <div class="score-group" id="opponent" aria-role="button">
+      	<div class="inset">
+      	  <div class="score"><ol><li>19</li><li>20</li><li>21</li></ol>
+        	</div>
+      	  <div class="bevel"></div>
+      	</div>
+      	<div class="label"><img src="images/opponent.png" alt="Opponent"></div>
+      </div>
+      <div class="score-group" id="player" aria-role="button">
+      	<div class="label"><img src="images/player.png" alt="Player"></div>
+        <div class="inset">
+      	  <div class="score"><ol><li>19</li><li>20</li><li>21</li></ol></div>
+      	  <div class="bevel"></div>
+      	</div>
+      </div>
+      <div id="clock">
+        <img class="face" src="images/face.png">
+        <img class="minutes" src="images/minutes.png">
+        <img class="hours" src="images/hours.png">
+      </div>
+<!--
+    	<form name="game" style="display: none">
+    		<button id="mark-as-win">:-D</button>
+    		<button id="mark-as-loss">:-(</button>
+    		<input id="reset" type="button" value="reset">
+    	</form>
+    	<ol id="results"></ol>
+--> 
+    </div>
+  	<div class="copyright">Magic for iPhone ©2008 <a href="http://ryancannon.com/">Ryan Cannon</a></div>
+	</div>
+	<script src="iphone.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

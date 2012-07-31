@@ -1,0 +1,142 @@
+body { background: #999; margin: 0; padding: 0;}
+.in-safari-chrome #doc { height: 386px;}
+.in-safari-chrome #bevel { height: 366px;}
+.in-safari-chrome #content { height: 346px;}
+.in-safari-chrome #clock { width: 100px; height: 110px;}
+
+#doc {
+  background: #554627 url(images/metal-pattern.jpg) repeat;
+  border: 15px solid #000;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  height: 430px;
+  overflow: hidden;
+  position: relative;
+  width: 290px;
+}
+#bevel {
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  -moz-border-image: url(images/bevel-border.png) 20 20 20 20 round round;
+  -webkit-border-image: url(images/bevel-border.png) 20 round round;
+  border-image: url(images/bevel-border.png) 20 round round;
+  height: 410px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+#gradient {
+/* Not supported in iPhone yet.
+  background: transparent url(images/background-gradient.png) no-repeat left bottom;
+  background-image: url(images/background-gradient.svg);
+  background: -webkit-gradient(linear, left bottom, right top, from(rgba(0,0,0,0.7)), to(rgba(0,0,0,0)), color-stop(0.5, rgba(0,0,0,0.5)));
+  -webkit-background-origin: padding;
+  -webkit-background-clip: content;  left: 0;
+*/
+  position: absolute;
+  top: 0;
+  height: 452px;
+  width: 290px;
+}
+#content {
+  height: 390px;
+  margin: 25px;
+  position: relative;
+}
+#clock { opacity: 0.75; position: ;}
+#clock, #clock>div {
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  width: 150px;
+}
+#clock>img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-transform: rotate(0deg);
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-delay: 0s;
+  -webikt-transition-easing-function: none;
+}
+#player { position: absolute; left: 0; bottom: 0; top: auto;}
+.score-group>.inset {
+  background: transparent url(images/inset-bg.png) no-repeat 2px 1px;
+  height: 78px;
+  width: 242px;
+  margin: 0 auto 10px;
+  position: relative;
+  /* background: 2E424E
+  -moz-border-image: url(images/inset-bevel.png) 9 9 9 8 repeat repeat;
+  -webkit-border-image: url(images/inset-bevel.jpg) 9 9 9 9 repeat repeat;
+  border-image: url(images/inset-bevel.png) 9 9 9 8 repeat repeat;
+  height: 75px;
+  text-align: center; font-size: 60px; line-height: 75px; cursor: pointer;
+  margin: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+  font-family: "Haettenschweiler", "Helvetica", sans-serif;
+  font-weight: bold;
+ */
+}
+.score-group>.inset>.bevel {
+  background: transparent url(images/inset.png) no-repeat left top;
+  cursor: pointer;
+  height: 78px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 242px;
+}
+.score-group>.inset>.score {
+  background: transparent url(images/inset-pattern.png) repeat left top;
+  font: bold normal 60px/73px Impact, Helvetica, sans-serif;
+  height: 73px;
+  left: 3px;
+  overflow: hidden;
+  position: absolute;
+  top: 2px;
+  width: 237px;
+}
+.score-group>.inset ol {
+  height: 100%;
+  left: -60.5px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 363px;
+}
+.score-group>.inset ol>li {
+  float: left;
+  height: 100%;
+  text-align: center;
+  width: 121px;
+  list-style: none;
+  opacity: 0.4;
+}
+.score-group>.label { text-align: center;}
+#console { display: none;}
+#results { overflow: hidden; padding-left: 0; }
+#results li { float: left; list-style: none; margin: 0 5px 5px 0; text-indent: 20px; width: 20px; overflow: hidden;}
+#results li.win { background: green;}
+#results li.loss { background: red;}
+
+.copyright {
+  font: normal normal 10px/15px Helvetica, sans-serif;
+  position: absolute; bottom: -15px;
+  color: #666; text-align: center;
+  overflow: visible;
+  display: block; margin-bottom: 0px;
+  width: 100%;
+}
+.copyright a { color: inherit;}
+@media screen and (max-width: 480px) {
+	#console { display: block; height: 0px; overflow: auto;}
+}

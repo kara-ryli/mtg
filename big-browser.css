@@ -1,0 +1,8 @@
+html { height: 100%; display: table; width: 100%;}
+body { margin: 0; padding: 0; display: table-cell; vertical-align: middle; height: 100%; width: 100%;}
+#doc {
+	width: 290px; height: 430px; margin: 0 auto; overflow: hidden;
+	-moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
